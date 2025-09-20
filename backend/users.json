@@ -1,5 +1,5 @@
 [
-  {"username":"teacher1","password":"pass123","role":"teacher"},
-  {"username":"mentor1","password":"pass123","role":"mentor"},
-  {"username":"student1","password":"pass123","role":"student"}
+  {"username":"teacher1","password":"pass","role":"teacher"},
+  {"username":"mentor1","password":"pass","role":"mentor"},
+  {"username":"student1","password":"pass","role":"student"}
 ]

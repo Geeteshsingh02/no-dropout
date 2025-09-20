@@ -1,0 +1,16 @@
+[
+  {
+    "name":"Neha",
+    "subjects":{"Math": 70, "Science": 65},
+    "attendance": 75,
+    "risk":"Moderate",
+    "counselingLogs":[]
+  },
+  {
+    "name":"Rahul",
+    "subjects":{"Math": 40, "Science": 35},
+    "attendance": 40,
+    "risk":"High",
+    "counselingLogs":[]
+  }
+]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management Platform</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="loginPage">
+  <div id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <select id="roleSelect">
+      <option value="teacher">Teacher</option>
+      <option value="mentor">Mentor</option>
+      <option value="student">Student</option>
+    </select>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div id="platform" class="container" style="display:none;">
+  <h1>Student Management Platform</h1>
+
+  <div class="tabs">
+    <button class="active" onclick="switchDashboard('teacher', this)">Teacher</button>
+    <button onclick="switchDashboard('mentor', this)">Mentor</button>
+    <button onclick="switchDashboard('student', this)">Student</button>
+  </div>
+
+  <!-- Teacher Dashboard -->
+  <div id="teacher" class="dashboard active">
+    <h2>Teacher Dashboard</h2>
+    <div class="card">
+      <h3>Add/Update Student Marks & Attendance</h3>
+      <form id="teacherForm">
+        <input type="text" placeholder="Student Name" id="teacherStudentName">
+        <input type="text" placeholder="Subject" id="teacherSubject">
+        <input type="number" placeholder="Marks" id="teacherMarks">
+        <input type="number" placeholder="Attendance %" id="teacherAttendance">
+        <button type="button" onclick="addMarks()">Submit</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Student Risk Levels</h3>
+      <table id="teacherTable">
+        <thead>
+          <tr><th>Name</th><th>Subjects</th><th>Attendance</th><th>Risk</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Mentor Dashboard -->
+  <div id="mentor" class="dashboard">
+    <h2>Mentor Dashboard</h2>
+    <div class="card">
+      <h3>At-Risk Students</h3>
+      <ul id="mentorList"></ul>
+    </div>
+    <div class="card">
+      <h3>Counseling Log</h3>
+      <textarea id="counselNotes" rows="3" placeholder="Add notes..."></textarea>
+      <button class="btn btn-green" onclick="addCounsel()">Save</button>
+    </div>
+  </div>
+
+  <!-- Student Dashboard -->
+  <div id="student" class="dashboard">
+    <h2>Student Dashboard</h2>
+    <div class="card">
+      <h3>Your Performance</h3>
+      <table id="studentTable">
+        <thead>
+          <tr><th>Subject</th><th>Marks</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="studentAttendance"></p>
+      <p id="studentRisk"></p>
+    </div>
+    <div class="card">
+      <h3>Performance Chart</h3>
+      <canvas id="studentChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

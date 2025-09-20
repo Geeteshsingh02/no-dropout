@@ -1,5 +1,172 @@
 [
-    {"name":"student1","subjects":{"Math":[70,65]},"attendance":80,"feesPaid":true,"risk":"Moderate","counseling":[],"section":"A","contact":"student1@example.com"},
-    {"name":"student2","subjects":{"Math":[50,40]},"attendance":60,"feesPaid":false,"risk":"High","counseling":[],"section":"A","contact":"student2@example.com"},
-    {"name":"student3","subjects":{"Science":[90,85]},"attendance":90,"feesPaid":true,"risk":"Safe","counseling":[],"section":"B","contact":"student3@example.com"}
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "section": "A",
+    "contact": "555-1234",
+    "email": "alice.johnson@example.com",
+    "attendance": 95,
+    "risk": "Low",
+    "subjects": {
+      "Math": [85, 90, 88],
+      "English": [92, 89, 94],
+      "Science": [87, 91, 93],
+      "History": [80, 85],
+      "Biology": [88, 90]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "section": "A",
+    "contact": "555-5678",
+    "email": "bob.smith@example.com",
+    "attendance": 70,
+    "risk": "High",
+    "subjects": {
+      "Math": [60, 55, 58],
+      "English": [65, 62],
+      "Science": [50, 48, 52],
+      "History": [55, 60],
+      "Biology": [45, 50]
+    },
+    "feesPaid": false
+  },
+  {
+    "id": 3,
+    "name": "Clara Lee",
+    "section": "B",
+    "contact": "555-9012",
+    "email": "clara.lee@example.com",
+    "attendance": 88,
+    "risk": "Moderate",
+    "subjects": {
+      "Math": [75, 78, 80],
+      "English": [80, 82],
+      "Science": [78, 76],
+      "History": [70, 73],
+      "Biology": [79, 81]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "section": "B",
+    "contact": "555-3456",
+    "email": "david.kim@example.com",
+    "attendance": 92,
+    "risk": "Low",
+    "subjects": {
+      "Math": [90, 92, 95],
+      "English": [88, 90],
+      "Science": [85, 87, 89],
+      "History": [91, 93],
+      "Biology": [90, 92]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 5,
+    "name": "Emma Brown",
+    "section": "A",
+    "contact": "555-7890",
+    "email": "emma.brown@example.com",
+    "attendance": 65,
+    "risk": "High",
+    "subjects": {
+      "Math": [55, 50, 53],
+      "English": [60, 58],
+      "Science": [52, 55],
+      "History": [50, 52],
+      "Biology": [48, 50]
+    },
+    "feesPaid": false
+  },
+  {
+    "id": 6,
+    "name": "Frank Wilson",
+    "section": "C",
+    "contact": "555-2345",
+    "email": "frank.wilson@example.com",
+    "attendance": 85,
+    "risk": "Moderate",
+    "subjects": {
+      "Math": [72, 75, 74],
+      "English": [78, 80],
+      "Science": [76, 78],
+      "History": [73, 75],
+      "Biology": [77, 79]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 7,
+    "name": "Grace Patel",
+    "section": "C",
+    "contact": "555-6789",
+    "email": "grace.patel@example.com",
+    "attendance": 90,
+    "risk": "Low",
+    "subjects": {
+      "Math": [88, 90, 92],
+      "English": [85, 87],
+      "Science": [89, 91],
+      "History": [87, 89],
+      "Biology": [90, 92]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 8,
+    "name": "Henry Davis",
+    "section": "B",
+    "contact": "555-0123",
+    "email": "henry.davis@example.com",
+    "attendance": 75,
+    "risk": "Moderate",
+    "subjects": {
+      "Math": [70, 72, 71],
+      "English": [75, 77],
+      "Science": [73, 74],
+      "History": [70, 72],
+      "Biology": [74, 76]
+    },
+    "feesPaid": false
+  },
+  {
+    "id": 9,
+    "name": "Isabella Garcia",
+    "section": "A",
+    "contact": "555-4567",
+    "email": "isabella.garcia@example.com",
+    "attendance": 93,
+    "risk": "Low",
+    "subjects": {
+      "Math": [87, 89, 91],
+      "English": [90, 92],
+      "Science": [88, 90],
+      "History": [85, 87],
+      "Biology": [89, 91]
+    },
+    "feesPaid": true
+  },
+  {
+    "id": 10,
+    "name": "James Martinez",
+    "section": "C",
+    "contact": "555-8901",
+    "email": "james.martinez@example.com",
+    "attendance": 68,
+    "risk": "High",
+    "subjects": {
+      "Math": [58, 60, 59],
+      "English": [62, 64],
+      "Science": [55, 57],
+      "History": [60, 62],
+      "Biology": [56, 58]
+    },
+    "feesPaid": false
+  }
 ]

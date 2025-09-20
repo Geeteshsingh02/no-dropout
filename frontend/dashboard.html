@@ -5,33 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenfield High School Portal - Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="app.js" defer></script>
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
     <div class="container">
-        <header>
+        <div class="dashboard-header">
             <h1>Greenfield High School Portal</h1>
-            <button onclick="logout()" class="btn-purple">Logout</button>
-        </header>
+            <button onclick="logout()" class="btn-purple"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
 
         <div class="tabs">
             <button onclick="switchDashboard('admin', this)">Admin</button>
             <button onclick="switchDashboard('teacher', this)">Teacher</button>
             <button onclick="switchDashboard('mentor', this)">Mentor</button>
-            <button onclick="switchDashboard('student', this)" class="active">Student</button>
+            <button onclick="switchDashboard('student', this)">Student</button>
         </div>
 
         <div id="admin" class="dashboard">
             <div class="card">
-                <h2>All Teachers</h2>
+                <h2><i class="fas fa-chalkboard-teacher"></i> All Teachers</h2>
                 <ul id="adminTeachers"></ul>
             </div>
             <div class="card">
-                <h2>High-Risk Students Contacts</h2>
+                <h2><i class="fas fa-exclamation-circle"></i> High-Risk Students Contacts</h2>
                 <ul id="adminHighRisk"></ul>
             </div>
             <div class="card">
-                <h2>Student Graphs</h2>
+                <h2><i class="fas fa-chart-pie"></i> Student Analytics</h2>
                 <div class="chart-container">
                     <canvas id="adminRiskChart"></canvas>
                 </div>
@@ -43,11 +47,27 @@
 
         <div id="teacher" class="dashboard">
             <div class="card">
-                <h2>Profile</h2>
+                <h2><i class="fas fa-user"></i> My Profile</h2>
                 <div id="teacherProfile"></div>
             </div>
             <div class="card">
-                <h2>High-Risk Students in My Section</h2>
+                <h2><i class="fas fa-users"></i> All Students in My Section</h2>
+                <table id="teacherAllStudentsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Subjects</th>
+                            <th>Latest Marks (My Subject)</th>
+                            <th>Attendance</th>
+                            <th>Risk</th>
+                            <th>Fees</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-exclamation-circle"></i> High-Risk Students</h2>
                 <table id="teacherHighRiskTable">
                     <thead>
                         <tr>
@@ -61,7 +81,13 @@
                 </table>
             </div>
             <div class="card">
-                <h2>Update Student Details (My Subject: Marks, Attendance, Fees)</h2>
+                <h2><i class="fas fa-chart-bar"></i> Class Performance</h2>
+                <div class="chart-container">
+                    <canvas id="teacherChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h2><i class="fas fa-edit"></i> Update Student Details (My Subject)</h2>
                 <table id="teacherUpdateTable">
                     <thead>
                         <tr>
@@ -79,23 +105,23 @@
 
         <div id="mentor" class="dashboard">
             <div class="card">
-                <h2>High-Risk Students</h2>
+                <h2><i class="fas fa-exclamation-circle"></i> High-Risk Students</h2>
                 <ul id="mentorList"></ul>
             </div>
         </div>
 
-        <div id="student" class="dashboard active">
+        <div id="student" class="dashboard">
             <div class="card">
-                <h2>Profile</h2>
+                <h2><i class="fas fa-user"></i> My Profile</h2>
                 <div id="studentProfile"></div>
             </div>
             <div class="card">
-                <h2>Marks in Each Subject</h2>
+                <h2><i class="fas fa-book"></i> Academic Performance</h2>
                 <table id="studentTable">
                     <thead>
                         <tr>
                             <th>Subject</th>
-                            <th>Marks</th>
+                            <th>Marks History</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -104,12 +130,23 @@
                 <div id="studentRisk"></div>
             </div>
             <div class="card">
-                <h2>Performance Chart</h2>
+                <h2><i class="fas fa-chart-bar"></i> Performance Chart</h2>
                 <div class="chart-container">
                     <canvas id="studentChart"></canvas>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Greenfield High School. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

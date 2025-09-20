@@ -5,29 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenfield High School Portal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="app.js" defer></script>
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
     <div class="container">
         <header>
             <h1>Greenfield High School Portal</h1>
-            <p>Monitor attendance, grades, and prevent early dropouts.</p>
-            <button onclick="document.getElementById('loginSection').scrollIntoView({behavior: 'smooth'})" class="btn-purple">Get Started</button>
+            <p>Empowering education with real-time monitoring of attendance, grades, and dropout prevention.</p>
+            <button onclick="document.getElementById('loginSection').scrollIntoView({behavior: 'smooth'})" class="btn-purple">
+                <i class="fas fa-rocket"></i> Get Started
+            </button>
         </header>
 
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Real-time Analytics</h3>
+                <p>Track student performance with intuitive dashboards and graphs.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Role-based Access</h3>
+                <p>Customized interfaces for admins, teachers, mentors, and students.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure & Reliable</h3>
+                <p>Protect sensitive data with modern security practices.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bell"></i>
+                <h3>Proactive Alerts</h3>
+                <p>Identify and support at-risk students early.</p>
+            </div>
+        </section>
+
         <section id="loginSection" class="card">
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <select id="roleSelect" required>
-                <option value="" disabled selected>Select Role</option>
-                <option value="admin">Admin</option>
-                <option value="teacher">Teacher</option>
-                <option value="mentor">Mentor</option>
-                <option value="student">Student</option>
-            </select>
-            <button id="loginBtn" onclick="login()" class="btn-green">Login</button>
+            <h2><i class="fas fa-lock"></i> Login to Your Account</h2>
+            <form>
+                <input type="text" id="username" placeholder="Username" required aria-label="Username">
+                <input type="password" id="password" placeholder="Password" required aria-label="Password">
+                <select id="roleSelect" required aria-label="Role">
+                    <option value="" disabled selected>Select Your Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="student">Student</option>
+                </select>
+                <button type="button" id="loginBtn" onclick="login()" class="btn-green">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
         </section>
     </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Greenfield High School. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

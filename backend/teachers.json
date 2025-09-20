@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "username": "teachermath",
+    "fullName": "Dr. John Mathis",
+    "subject": "Math",
+    "section": "A",
+    "email": "john.mathis@example.com"
+  },
+  {
+    "id": 2,
+    "username": "teacherenglish",
+    "fullName": "Ms. Emily Wordsworth",
+    "subject": "English",
+    "section": "A",
+    "email": "emily.wordsworth@example.com"
+  },
+  {
+    "id": 3,
+    "username": "teacherscience",
+    "fullName": "Prof. Sarah Newton",
+    "subject": "Science",
+    "section": "B",
+    "email": "sarah.newton@example.com"
+  },
+  {
+    "id": 4,
+    "username": "teacherhistory",
+    "fullName": "Mr. David Lincoln",
+    "subject": "History",
+    "section": "C",
+    "email": "david.lincoln@example.com"
+  },
+  {
+    "id": 5,
+    "username": "teacherbiology",
+    "fullName": "Dr. Lisa Darwin",
+    "subject": "Biology",
+    "section": "B",
+    "email": "lisa.darwin@example.com"
+  }
+]

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfield High School Portal - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Greenfield High School Portal</h1>
+            <button onclick="logout()" class="btn-purple">Logout</button>
+        </header>
+
+        <div class="tabs">
+            <button onclick="switchDashboard('admin', this)">Admin</button>
+            <button onclick="switchDashboard('teacher', this)">Teacher</button>
+            <button onclick="switchDashboard('mentor', this)">Mentor</button>
+            <button onclick="switchDashboard('student', this)" class="active">Student</button>
+        </div>
+
+        <div id="admin" class="dashboard">
+            <div class="card">
+                <h2>All Teachers</h2>
+                <ul id="adminTeachers"></ul>
+            </div>
+            <div class="card">
+                <h2>High-Risk Students Contacts</h2>
+                <ul id="adminHighRisk"></ul>
+            </div>
+            <div class="card">
+                <h2>Student Graphs</h2>
+                <div class="chart-container">
+                    <canvas id="adminRiskChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="adminAttendanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="teacher" class="dashboard">
+            <div class="card">
+                <h2>Profile</h2>
+                <div id="teacherProfile"></div>
+            </div>
+            <div class="card">
+                <h2>High-Risk Students in My Section</h2>
+                <table id="teacherHighRiskTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Subjects</th>
+                            <th>Attendance</th>
+                            <th>Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>Update Student Details (My Subject: Marks, Attendance, Fees)</h2>
+                <table id="teacherUpdateTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Marks</th>
+                            <th>Attendance (%)</th>
+                            <th>Fees Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="mentor" class="dashboard">
+            <div class="card">
+                <h2>High-Risk Students</h2>
+                <ul id="mentorList"></ul>
+            </div>
+        </div>
+
+        <div id="student" class="dashboard active">
+            <div class="card">
+                <h2>Profile</h2>
+                <div id="studentProfile"></div>
+            </div>
+            <div class="card">
+                <h2>Marks in Each Subject</h2>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="studentAttendance"></div>
+                <div id="studentRisk"></div>
+            </div>
+            <div class="card">
+                <h2>Performance Chart</h2>
+                <div class="chart-container">
+                    <canvas id="studentChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,4 +1,5 @@
 [
-  {"name":"Neha","subjects":{"Math":70,"Science":65},"attendance":75,"risk":"Moderate","counseling":[]},
-  {"name":"Rahul","subjects":{"Math":40,"Science":35},"attendance":40,"risk":"High","counseling":[]}
+    {"name":"student1","subjects":{"Math":[70,65]},"attendance":80,"feesPaid":true,"risk":"Moderate","counseling":[],"section":"A","contact":"student1@example.com"},
+    {"name":"student2","subjects":{"Math":[50,40]},"attendance":60,"feesPaid":false,"risk":"High","counseling":[],"section":"A","contact":"student2@example.com"},
+    {"name":"student3","subjects":{"Science":[90,85]},"attendance":90,"feesPaid":true,"risk":"Safe","counseling":[],"section":"B","contact":"student3@example.com"}
 ]

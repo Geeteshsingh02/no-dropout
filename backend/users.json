@@ -1,5 +1,9 @@
 [
-  {"username":"teacher1","password":"pass","role":"teacher"},
-  {"username":"mentor1","password":"pass","role":"mentor"},
-  {"username":"student1","password":"pass","role":"student"}
+    {"username":"admin1","password":"admin","role":"admin"},
+    {"username":"teacher1","password":"pass","role":"teacher","subject":"Math","section":"A"},
+    {"username":"teacher2","password":"pass","role":"teacher","subject":"Science","section":"B"},
+    {"username":"mentor1","password":"pass","role":"mentor"},
+    {"username":"student1","password":"pass","role":"student","section":"A"},
+    {"username":"student2","password":"pass","role":"student","section":"A"},
+    {"username":"student3","password":"pass","role":"student","section":"B"}
 ]
